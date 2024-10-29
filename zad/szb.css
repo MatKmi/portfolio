@@ -1,0 +1,26 @@
+.lewy{
+    height: 400px;
+    width: 25%;
+    float: left;
+    text-align: left;
+}
+.tekst{
+    background-color: aquamarine;
+    color: black;
+    height: 150px;
+    width: 200px;
+}
+.wybor{
+    background-color: black;
+    color: yellow;
+    width: 150px;
+    height: auto;
+    font-size: large;
+}
+.przycisk{
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+}

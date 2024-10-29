@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co to jest</title>
+    <link rel="stylesheet" href="szb15_10.css"/>
+</head>
+<script>
+function x(){
+    let a=document.getElementById('tekstowe').value;
+    let opcja=document.getElementById('wyborowe').selectedIndex;
+    if (opcja==0) w="10px"
+    if (opcja==1) w="18px"
+    if (opcja==2) w="24px"
+    if (opcja==3) w="40px"
+    if (opcja==4) w="72px"
+document.getElementById('wynik').style.fontSize=w;
+document.getElementById('wynik').innerHTML=a
+
+if (document.getElementById('ran').checked){
+    r=Math.floor(Math.random()*256)
+    g=Math.floor(Math.random()*256)
+    b=Math.floor(Math.random()*256)
+    kolor='rgb('+r+','+g+','+b+')'
+}
+if (document.getElementById('cz').checked) kolor='red'
+if (document.getElementById('z').checked) kolor='green'
+if (document.getElementById('c').checked) kolor='cyan'
+if (document.getElementById('n').checked) kolor='blue'
+if (document.getElementById('zol').checked) kolor='yellow'
+document.getElementById('wynik').style.color=kolor
+
+let opcja2=document.getElementById("czcionka").value;
+document.getElementById("wynik").style.fontFamily=opcja2;
+
+if (document.getElementById("grubo").checked==true) document.getElementById('wynik').style.fontWeight="bold"
+else document.getElementById('wynik').style.fontWeight="normal"
+
+if (document.getElementById("r1").checked) deko="none"
+if (document.getElementById("r2").checked) deko="underline"
+if (document.getElementById("r3").checked) deko="overline"
+if (document.getElementById("r4").checked) deko="line-through"
+document.getElementById("wynik").style.textDecoration=deko
+
+document.body.style.backgroundColor=document.getElementById("tlo").value;
+}
+
+
+
+</script>
+<body>
+<section class="lewy">
+<textarea class="tekst" placeholder="Podaj tekst" id="tekstowe"></textarea>
+<br>Wybierz wielkość tekstu:<br>
+<select  id="wyborowe" class="wybor" size="5">
+    <option>liliput</option>
+    <option>Maly</option>
+    <option selected>Sredni</option>
+    <option>Duzy</option>
+    <option>Ogromny</option>
+</select>
+
+<br>Wybierz kolor tekstu:<br>
+<p><Label><input type="radio" id="cz" name="kolorcz" checked>Czerwony</Label></p>
+<p><Label><input type="radio" id="z" name="kolorcz">Zielony</Label></p>
+<p><Label><input type="radio" id="c" name="kolorcz">Cyan</Label></p>
+<p><Label><input type="radio" id="n" name="kolorcz">Niebieski</Label></p>
+<p><Label><input type="radio" id="zol" name="kolorcz">Żółty</Label></p>
+<p><Label><input type="radio" id="ran" name="kolorcz">losowy</Label></p><br>
+
+<p>Wybierz czcionke:</p><br>
+<select class="wybor" id="czcionka" size="5">
+    <option value="Arial" selected>Arial</option>
+    <option value="Monotype corsiva">Monotype corsiva</option>
+    <option value="Tahoma">Tahoma</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Georgia">Georgia</option>
+</select>
+
+<br><p><label><input type="checkbox" id="grubo">Czy pogrubic?</label></p>
+<br><p>Wybierz kolor tła:<input type="color" id="tlo" value="#ff0000"></p>
+<br>Czy Udekorować?<br>
+<p><Label><input type="radio" id="r1" name="dekoracja" checked>Bez dekoracji</Label></p>
+<p><Label><input type="radio" id="r2" name="dekoracja" >Podkreslony</Label></p>
+<p><Label><input type="radio" id="r3" name="dekoracja" >Nadkreślony</Label></p>
+<p><Label><input type="radio" id="r4" name="dekoracja" >Przekreślony</Label></p>
+
+<br><input type="button" class="przycisk" onclick=x() value="pokaz">
+<p id="wynik"></p>
+
+</section>
+</body>
+</html>
