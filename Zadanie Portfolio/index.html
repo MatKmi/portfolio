@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co to jest</title>
+    <link rel="stylesheet" href="szb.css"/>
+</head>
+<body>
+<section class="lewy">
+<textarea class="tekst" placeholder="Podaj tekst" id="tekstowe"></textarea>
+<br>Wybierz wielkość tekstu:<br>
+<select  id="wyborowe" class="wybor" size="5">
+    <option>liliput</option>
+    <option>Maly</option>
+    <option>Sredni</option>
+    <option>Duzy</option>
+    <option>Ogromny</option>
+</select>
+<br>Wybierz kolor tekstu:<br>
+<p><Label><input type="radio" id="cz" name="czcionka" checked>Czerwony</Label></p>
+<p><Label><input type="radio" id="z" name="czcionka">Zielony</Label></p>
+<p><Label><input type="radio" id="c" name="czcionka">Cyan</Label></p>
+<p><Label><input type="radio" id="n" name="czcionka">Niebieski</Label></p>
+<p><Label><input type="radio" id="zol" name="czcionka">Żółty</Label></p>
+<p><Label><input type="radio" id="ran" name="czcionka">losowy</Label></p><br>
+<p>Wybierz czcionke:</p><br>
+<select class="wybor" id="czcionka" size="5">
+    <option>Arial</option>
+    <option>Monotype corsiva</option>
+    <option>Tahoma</option>
+    <option>Verdana</option>
+    <option>Georgia</option>
+</select>
+<br><p><label><input type="checkbox" id="grubo">Czy pogrubic?</label></p>
+<br><p>Wybierz kolor tła:<input type="color" id="tlo" value="#ff0000"></p>
+</section>
+</body>
+</html>
